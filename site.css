@@ -124,6 +124,7 @@ a.fill-darken0:hover  { background-color:rgba(0,0,0,0.15); }
   background-repeat:no-repeat;
   background-size:contain;
   max-width:100%;
+  width:100%;
   background-position: center center;
   }
 
