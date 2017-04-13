@@ -122,7 +122,7 @@ a.fill-darken0:hover  { background-color:rgba(0,0,0,0.15); }
   /* Replace this with a map of your city */
   background-image:url(img/westslope.png);
   background-repeat:repeat-y;
-  background-size:contain;
+  background-size:cover;
   max-width:100%;
   }
 
