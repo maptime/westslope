@@ -13,3 +13,5 @@ All participants will receive a bike or car phone mount designed specifically fo
 Please bring a bicycle or car, download Mapillary on your phone, and create a Mapillary account prior to the event.
 
 Join us afterwards for a beer at The Point!
+
+![Point Map]({{ site.url }}/westslope/img/point_loc.png)
