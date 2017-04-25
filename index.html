@@ -2,6 +2,15 @@
 layout: default
 ---
 
+<div class="sticky-info">
+  <h2>Welcome to Maptime WestSlope!</h2>
+  <p>Let's map the Western Slope! Yeah, yeah... there are lots of maps out there and plenty of local government data too but the data available isn't always imported into OSM for the public to use easily.. And OSM has pretty decent detail in the region. And as we can see... things are always changing, new trails, new businesses and new roads.</p>
+  <p>The goal of this group is to introduce OpenStreetMap to the community, develop a community of mappers, create the most amazing geodata possible using whatever method we can and finally strategize in order to get this data out into our community. Imagine accurate trail signage! Imagine further development of bike paths! Imagine anything you want, that's the joy of OpenStreetMap!</p>
+  <p>Start mapping on OpenStreetMap now by signing up for free <a href='https://www.openstreetmap.org/user/new'>here!</a> </p>
+</div>
+
+<h2>Upcoming Events</h2>
+<hr>
 <!-- This loops through the paginated posts -->
 {% for item in paginator.posts %}
 <div class='space-bottom4'>
@@ -30,7 +39,11 @@ layout: default
   {% endif %}
 </div>
 {% endfor %}
-
+<hr>
+<br>
+<br>
+<h2>Past Events</h2>
+<hr>
 <!-- Pagination links -->
 <div class='col12 center small strong space pad2y'>
   {% if paginator.previous_page %}
