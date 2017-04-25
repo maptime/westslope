@@ -16,7 +16,7 @@ layout: default
 <div class='space-bottom4'>
 
   {% if item.category == 'event' %}
-
+    {% if item.date > site.time %}
     <h2><a href='{{site.baseurl}}{{item.url}}'>{{item.title}}</a></h2>
     {{item.content}}
     <div class='keyline-all round pad2 col12 clearfix'>
@@ -35,14 +35,14 @@ layout: default
     <div class='pad1y keyline-top'>
       <strong class='quiet small block space-bottom1'>Posted {{item.date | date:"%b %d %Y"}} by {{item.author}}</strong>
     </div>
-
+    {% endif %}
   {% endif %}
 </div>
 {% endfor %}
 <hr>
 <br>
 <br>
-<h2>Past Events</h2>
+<h2>Blog Posts</h2>
 <hr>
 <!-- Pagination links -->
 <div class='col12 center small strong space pad2y'>
@@ -57,4 +57,31 @@ layout: default
     <a href='{{site.baseurl}}/page{{ paginator.next_page }}' class='button fill-blue rcon right-arrow'>Older</a>
   {% endif %}
 </div>
+
+<hr>
+<br>
+<br>
+<h2>Past Events</h2>
+<!-- This loops through the paginated posts -->
+{% for item in paginator.posts%}
+<div class='space-bottom4'>
+
+  {% if item.category == 'event' %}
+    {% if item.date < site.time %}
+      <h2><a href='{{site.baseurl}}{{item.url}}'>{{item.title}}</a></h2>
+      {{item.content}}
+
+        <div class='keyline-all round pad2 col12 clearfix'>
+          <div class='col8 pad0y'>
+            Event Date:  <span class='quiet'>{{item.date | date:"%A, %b %d %Y"}}</span>
+          </div>
+          <div class='col4'>
+            <a class='button fill-orange block' href='{{item.rsvp}}'>Link to Meetup</a>
+          </div>
+        </div>
+
+    {% endif %}
+  {% endif %}
+</div>
+{% endfor %}
 
