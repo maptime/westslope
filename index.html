@@ -48,6 +48,8 @@ layout: default
 <h2>Blog Posts</h2>
 <hr>
 <!-- Pagination links -->
+{% for item in paginator.posts%}
+  {% if item.category = 'post' %}
 <div class='col12 center small strong space pad2y'>
   {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}
@@ -59,6 +61,8 @@ layout: default
   {% if paginator.next_page %}
     <a href='{{site.baseurl}}/page{{ paginator.next_page }}' class='button fill-blue rcon right-arrow'>Older</a>
   {% endif %}
+  {% endif %}
+  {% endfor %}
 </div>
 
 <hr>
