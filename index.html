@@ -34,9 +34,6 @@ layout: default
         <div class='keyline-all round pad2 col12 clearfix' style="text-align:center;">
            <span class='quiet'>Date to be determined!</span>
         </div>
-      {% else %}
-
-
       {% endif %}
     {% endif %}
   {% endif %}
@@ -50,14 +47,12 @@ layout: default
 <!-- Pagination links -->
 {% for item in paginator.posts %}
 <div class='space-bottom4'>
-
   {% if item.category == 'post' %}
     <h2><a href='{{site.baseurl}}{{item.url}}'>{{item.title}}</a></h2>
     {{item.content}}
     <div class='pad1y keyline-top'>
       <strong class='quiet small block space-bottom1'>Posted {{item.date | date:"%b %d %Y"}} by {{item.author}}</strong>
     </div>
-
   {% endif %}
 </div>
 {% endfor %}
@@ -70,7 +65,6 @@ layout: default
 <!-- This loops through the paginated posts -->
 {% for item in paginator.posts%}
 <div class='space-bottom4'>
-
   {% if item.category == 'event' %}
     {% if item.date < site.time %}
       <h2><a href='{{site.baseurl}}{{item.url}}'>{{item.title}}</a></h2>
