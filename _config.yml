@@ -8,6 +8,7 @@ github_org: maptime
 maptime:
   chapter: MaptimeWestSlope
   twitter: MaptimeWestCO
+  facebook: wsosm
   #disqus: YOUR DISQUS USERNAME
 
 gems:
